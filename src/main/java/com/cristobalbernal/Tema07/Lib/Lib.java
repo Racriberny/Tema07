@@ -78,6 +78,9 @@ public class Lib {
     public static void visualizarArraysInt(int[] array){
         System.out.println(Arrays.toString(array));
     }
+    public static void visualizarArraysChar(char[] array){
+        System.out.println(Arrays.toString(array));
+    }
 
     public static void visualizarArraysDouble(double[] array){
         System.out.println(Arrays.toString(array));
@@ -101,6 +104,15 @@ public class Lib {
         }
     }
 
+    public static char[] rellenarArrayLetrasMayus(char[] array, final String LETRAS) {
+        final int VALOR_MIN = 0;
+        final int VALOR_MAX = LETRAS.length()-1;
 
+        for(int i = 0; i < array.length; i++) {
+            array[i] = LETRAS.charAt(Lib.numeroAleatorio(VALOR_MIN, VALOR_MAX));
+        }
+
+        return array;
+    }
 }
 
